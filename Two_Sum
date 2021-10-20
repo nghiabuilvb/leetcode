@@ -1,0 +1,26 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+             
+        for e in nums:
+            # initial value of variable
+            compare = 0
+            result = []
+            ##
+            compare = compare + e
+            result.append(nums.index(e))
+            for check in nums[nums.index(e)+1:]:
+                compare1 = compare + check
+                if compare1 == target:
+                    result.append(nums.index(check,nums.index(e)+1))
+                    print(result)
+              
+
+nums = [2,7,11,15]
+target = 9
+a = Solution()
+a.twoSum(nums,target)
